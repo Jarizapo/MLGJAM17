@@ -1,14 +1,27 @@
 [gd_scene load_steps=6 format=3 uid="uid://cx0xty7h4277e"]
 
 [ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_aakwn"]
+[ext_resource type="Script" path="res://codigo/CustomButtons.gd" id="2_dfs8b"]
 [ext_resource type="Texture2D" uid="uid://bb838x5trsawt" path="res://recursos/boton_jugar.png" id="2_pwpvl"]
 [ext_resource type="Texture2D" uid="uid://c33ucv2g61ca" path="res://recursos/boton_jugar_hover.png" id="3_3vn0e"]
 [ext_resource type="Texture2D" uid="uid://dblyx35l7sn0c" path="res://recursos/boton_jugar_pulsado.png" id="3_dyv0y"]
-[ext_resource type="Script" path="res://codigo/boton_jugar.gd" id="5_ssyrl"]
 
 [node name="Principal" type="Sprite2D"]
 position = Vector2(143, 78)
 texture = ExtResource("1_aakwn")
+
+[node name="CustomButtons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 39.0
+offset_bottom = 13.0
+script = ExtResource("2_dfs8b")
+
+[node name="ColorRect" type="ColorRect" parent="CustomButtons"]
+layout_mode = 0
+offset_right = 39.0
+offset_bottom = 13.0
+color = Color(1, 1, 1, 0)
 
 [node name="Button" type="Button" parent="."]
 offset_right = 8.0
@@ -21,4 +34,3 @@ offset_bottom = 13.0
 texture_normal = ExtResource("2_pwpvl")
 texture_pressed = ExtResource("3_dyv0y")
 texture_hover = ExtResource("3_3vn0e")
-script = ExtResource("5_ssyrl")

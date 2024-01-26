@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfdkb52j5lht3"]
+
+[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_u28ua"]
+
+[node name="BaseParaNarrativa" type="Node2D"]
+
+[node name="Narrativa" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "chipi chipi chapa chapa dubi dubi da
+ba daba magico mi dubi dubi bum
+bum bum bum"
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(143, 78)
+texture = ExtResource("1_u28ua")
+
+[node name="PulsaContinuar" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 127.0
+offset_right = 258.0
+offset_bottom = 150.0
+text = "Pulsa [Espacio] para continuar"
