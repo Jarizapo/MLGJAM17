@@ -1,4 +1,4 @@
-extends TextureButton
+extends Label
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,5 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(button_pressed):
-		get_tree().change_scene_to_file("res://escenas/historia/oveja_rosaleda.tscn")
+	await get_tree().create_timer(0.5).timeout
+	if(Input.is_action_pressed("continue")):
+		get_tree().change_scene_to_file("res://escenas/historia/salon_para_regalos.tscn")
