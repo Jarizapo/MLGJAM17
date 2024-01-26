@@ -15,6 +15,18 @@ run/main_scene="res://escenas/principal.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=286
+window/size/viewport_height=156
+window/size/window_width_override=429
+window/size/window_height_override=234
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="MLGJAM17"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

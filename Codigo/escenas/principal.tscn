@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://cx0xty7h4277e"]
+[gd_scene load_steps=2 format=3 uid="uid://cx0xty7h4277e"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_aakwn"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(143, 80)
+texture = ExtResource("1_aakwn")
+
+[node name="CustomButtons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CustomButtons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="CustomButtons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
