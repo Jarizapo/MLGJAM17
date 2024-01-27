@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://codigo/oveja.gd" id="1_inyc6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5k8v"]
-size = Vector2(11.5, 11.5)
+size = Vector2(12, 12)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_inyc6")
