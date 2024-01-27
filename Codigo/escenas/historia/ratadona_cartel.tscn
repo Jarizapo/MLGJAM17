@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcu5p72bvphx1"]
 
-[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_3bt5j"]
 [ext_resource type="FontFile" uid="uid://dqkbix63hxs1n" path="res://MLGJAM17.ttf" id="1_thtpb"]
+[ext_resource type="Texture2D" uid="uid://83cdtmqtmb1" path="res://recursos/fondos_narrativa/ratadona.png" id="2_7udyl"]
 [ext_resource type="Script" path="res://codigo/PulsaContinuarRatadona.gd" id="2_ny0pv"]
 [ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="3_yy22s"]
 
@@ -15,7 +15,7 @@ text = "Ratadona cartel"
 
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
-texture = ExtResource("1_3bt5j")
+texture = ExtResource("2_7udyl")
 
 [node name="PulsaContinuar" type="Label" parent="."]
 offset_left = 24.0

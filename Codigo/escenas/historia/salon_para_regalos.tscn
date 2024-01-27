@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c27airmthqe7g"]
 
 [ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="1_1bnxa"]
-[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_d642r"]
+[ext_resource type="Texture2D" uid="uid://cuywam0eu35t4" path="res://recursos/fondos_narrativa/salon.png" id="2_rng3p"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
@@ -13,7 +13,7 @@ text = "Salón para regalos"
 
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
-texture = ExtResource("1_d642r")
+texture = ExtResource("2_rng3p")
 
 [node name="PulsaContinuar" type="Label" parent="."]
 offset_left = 24.0

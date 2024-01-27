@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwg565qm8dav1"]
 
-[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_dmp64"]
+[ext_resource type="Texture2D" uid="uid://uillw1wdfnnh" path="res://recursos/fondos_narrativa/carruaje.png" id="1_sewji"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
@@ -13,7 +13,7 @@ bum bum bum"
 
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
-texture = ExtResource("1_dmp64")
+texture = ExtResource("1_sewji")
 
 [node name="PulsaContinuar" type="Label" parent="."]
 offset_left = 24.0

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckp5blpiaxig6"]
 
-[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_ogpmw"]
 [ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="1_r87lh"]
 [ext_resource type="Script" path="res://codigo/PulsaContinuarWhatsapp.gd" id="2_e6vfj"]
+[ext_resource type="Texture2D" uid="uid://bdxdqjkhoh6xa" path="res://recursos/fondos_narrativa/whatsapp.png" id="2_k6gvs"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
@@ -14,7 +14,7 @@ text = "Meme whatsapp"
 
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
-texture = ExtResource("1_ogpmw")
+texture = ExtResource("2_k6gvs")
 
 [node name="PulsaContinuar" type="Label" parent="."]
 offset_left = 24.0

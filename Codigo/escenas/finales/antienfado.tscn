@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dgb8cifarh4wa"]
 
-[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_f6gnw"]
+[ext_resource type="Texture2D" uid="uid://blhhfilntxkf3" path="res://recursos/fondos_narrativa/dandose_mano.png" id="1_prikq"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
@@ -13,7 +13,7 @@ bum bum bum"
 
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
-texture = ExtResource("1_f6gnw")
+texture = ExtResource("1_prikq")
 
 [node name="PulsaContinuar" type="Label" parent="."]
 offset_left = 24.0

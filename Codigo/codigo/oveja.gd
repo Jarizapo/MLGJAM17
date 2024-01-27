@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var interactLabel = $"Interaction Components/InteractLabel"
 
 var speed = 10.0
-var objects = []
+var objects = [false, false, false, false, false, false, false, false]
 var objectBeingCatched
 var numberOfObjects = 0
 @onready var areas = [
@@ -20,8 +20,6 @@ var numberOfObjects = 0
 
 func _ready():
 	update_interactions()
-	objects.resize(8)
-	objects.fill(false)
 
 func _physics_process(delta):
 	velocity = Vector2(velocity.x-velocity.x/6, velocity.y-velocity.y/6)
@@ -44,8 +42,8 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("finish_shopping"):
 		print(objects)
-		if(objects[0] == true):
-			get_tree().change_scene_to_file("res://escenas/gameplay.tscn")
+		if(objects[0] || objects[4]) && (objects[3] || objects[4]):
+			get_tree().change_scene_to_file("res://escenas/finales/antienfado_antitristeza.tscn")
 
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
@@ -73,49 +71,49 @@ func add_object(object):
 	if(numberOfObjects < 2):
 		match object:
 			"bombones":
-				objects.insert(7, true)
+				objects.set(7, true)
 				objectBeingCatched = $"../Objetos/Bombones"
 				if($"../Objetos/Bombones/InteractArea" != null):
 					$"../Objetos/Bombones/InteractArea".interact_label = ""
 				areas.remove_at(7)
 			"desatascador":
-				objects.insert(6, true)
+				objects.set(6, true)
 				objectBeingCatched = $"../Objetos/Desatascador"
 				if($"../Objetos/Desatascador/InteractArea" != null):
 					$"../Objetos/Desatascador/InteractArea".interact_label = ""
 				areas.remove_at(6)
 			"payaso":
-				objects.insert(5, true)
+				objects.set(5, true)
 				objectBeingCatched = $"../Objetos/Payaso"
 				if($"../Objetos/Payaso/InteractArea" != null):
 					$"../Objetos/Payaso/InteractArea".interact_label = ""
 				areas.remove_at(5)
 			"pintapezuñas":
-				objects.insert(4, true)
+				objects[4] = true
 				objectBeingCatched = $"../Objetos/Pintapezuñas"
 				if($"../Objetos/Pintapezuñas/InteractArea" != null):
 					$"../Objetos/Pintapezuñas/InteractArea".interact_label = ""
 				areas.remove_at(4)
 			"tanga":
-				objects.insert(3, true)
+				objects[3] = true
 				objectBeingCatched = $"../Objetos/Tanga"
 				if($"../Objetos/Tanga/InteractArea" != null):
 					$"../Objetos/Tanga/InteractArea".interact_label = ""
 				areas.remove_at(3)
 			"taza":
-				objects.insert(2, true)
+				objects.set(2, true)
 				objectBeingCatched = $"../Objetos/Taza"
 				if($"../Objetos/Taza/InteractArea" != null):
 					$"../Objetos/Taza/InteractArea".interact_label = ""
 				areas.remove_at(2)
 			"tijeras":
-				objects.insert(1, true)
+				objects.set(1, true)
 				objectBeingCatched = $"../Objetos/Tijeras"
 				if($"../Objetos/Tijeras/InteractArea" != null):
 					$"../Objetos/Tijeras/InteractArea".interact_label = ""
 				areas.remove_at(1)
 			"tinte":
-				objects.insert(0, true)
+				objects.set(0, true)
 				objectBeingCatched = $"../Objetos/Tinte"
 				if($"../Objetos/Tinte/InteractArea" != null):
 					$"../Objetos/Tinte/InteractArea".interact_label = ""
