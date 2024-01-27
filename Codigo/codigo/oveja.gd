@@ -7,6 +7,16 @@ var speed = 10.0
 var objects = []
 var objectBeingCatched
 var numberOfObjects = 0
+@onready var areas = [
+				$"../Objetos/Tinte/InteractArea",
+				$"../Objetos/Tijeras/InteractArea",
+				$"../Objetos/Taza/InteractArea",
+				$"../Objetos/Tanga/InteractArea",
+				$"../Objetos/Pintapezuñas/InteractArea",
+				$"../Objetos/Payaso/InteractArea",
+				$"../Objetos/Desatascador/InteractArea",
+				$"../Objetos/Bombones/InteractArea"
+			]
 
 func _ready():
 	update_interactions()
@@ -66,34 +76,42 @@ func add_object(object):
 				objects.insert(5, true)
 				objectBeingCatched = $"../Objetos/Bombones"
 				$"../Objetos/Bombones/InteractArea".interact_label = ""
+				areas.remove_at(7)
 			"desatascador":
 				objects.insert(8, true)
 				objectBeingCatched = $"../Objetos/Desatascador"
 				$"../Objetos/Desatascador/InteractArea".interact_label = ""
+				areas.remove_at(6)
 			"payaso":
 				objects.insert(3, true)
 				objectBeingCatched = $"../Objetos/Payaso"
 				$"../Objetos/Payaso/InteractArea".interact_label = ""
+				areas.remove_at(5)
 			"pintapezuñas":
 				objects.insert(0, true)
 				objectBeingCatched = $"../Objetos/Pintapezuñas"
 				$"../Objetos/Pintapezuñas/InteractArea".interact_label = ""
+				areas.remove_at(4)
 			"tanga":
 				objects.insert(4, true)
 				objectBeingCatched = $"../Objetos/Tanga"
 				$"../Objetos/Tanga/InteractArea".interact_label = ""
+				areas.remove_at(3)
 			"taza":
 				objects.insert(6, true)
 				objectBeingCatched = $"../Objetos/Taza"
 				$"../Objetos/Taza/InteractArea".interact_label = ""
+				areas.remove_at(2)
 			"tijeras":
 				objects.insert(7, true)
 				objectBeingCatched = $"../Objetos/Tijeras"
 				$"../Objetos/Tijeras/InteractArea".interact_label = ""
+				areas.remove_at(1)
 			"tinte":
 				objects.insert(1, true)
 				objectBeingCatched = $"../Objetos/Tinte"
 				$"../Objetos/Tinte/InteractArea".interact_label = ""
+				areas.remove_at(0)
 		
 		objectBeingCatched.get_parent().remove_child(objectBeingCatched)
 		add_child(objectBeingCatched)
@@ -101,17 +119,6 @@ func add_object(object):
 			objectBeingCatched.transform.origin = Vector2(3,-10)
 		elif(numberOfObjects == 1):
 			objectBeingCatched.transform.origin = Vector2(3,-20)
-			
-			var areas = [
-				$"../Objetos/Tinte/InteractArea",
-				$"../Objetos/Tijeras/InteractArea",
-				$"../Objetos/Taza/InteractArea",
-				$"../Objetos/Tanga/InteractArea",
-				$"../Objetos/Pintapezuñas/InteractArea",
-				$"../Objetos/Payaso/InteractArea",
-				$"../Objetos/Desatascador/InteractArea",
-				$"../Objetos/Bombones/InteractArea"
-			]
 			
 			for area in areas:
 				if(area != null):

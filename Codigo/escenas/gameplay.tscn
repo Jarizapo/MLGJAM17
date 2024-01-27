@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://bkef2oid0djle"]
+[gd_scene load_steps=27 format=3 uid="uid://bkef2oid0djle"]
 
-[ext_resource type="Texture2D" uid="uid://bpb0eprjt0k1k" path="res://recursos/Plano.png" id="1_bn1sm"]
+[ext_resource type="Texture2D" uid="uid://b7kt0h1mfo8n2" path="res://recursos/Plano.png" id="1_bn1sm"]
+[ext_resource type="Texture2D" uid="uid://ciiotsar3xlfn" path="res://recursos/Plano2.png" id="2_jmvxi"]
 [ext_resource type="PackedScene" uid="uid://jbwkm8u1u0il" path="res://escenas/oveja.tscn" id="2_qfg6h"]
 [ext_resource type="Texture2D" uid="uid://bgc8lmds264uh" path="res://recursos/sprites_y_tiles/objetos/Pintapezunas.png" id="3_e24km"]
 [ext_resource type="PackedScene" uid="uid://bfei0eroq0gnx" path="res://escenas/interact_area.tscn" id="4_ylrrm"]
@@ -56,14 +57,14 @@ size = Vector2(286, 10)
 
 [node name="Gameplay" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Supermercado" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("1_bn1sm")
 
 [node name="Objetos" type="Node" parent="."]
 
 [node name="Bombones" type="Sprite2D" parent="Objetos"]
-position = Vector2(125, 27)
+position = Vector2(142, 105)
 texture = ExtResource("5_e32vb")
 
 [node name="InteractArea" parent="Objetos/Bombones" instance=ExtResource("4_ylrrm")]
@@ -72,7 +73,7 @@ interact_type = "print_text"
 interact_value = "bombones"
 
 [node name="Desatascador" type="Sprite2D" parent="Objetos"]
-position = Vector2(167, 26)
+position = Vector2(119, 52)
 texture = ExtResource("6_hti0l")
 
 [node name="InteractArea" parent="Objetos/Desatascador" instance=ExtResource("4_ylrrm")]
@@ -81,7 +82,7 @@ interact_type = "print_text"
 interact_value = "desatascador"
 
 [node name="Tanga" type="Sprite2D" parent="Objetos"]
-position = Vector2(127, 63)
+position = Vector2(19, 120)
 texture = ExtResource("7_r2b22")
 
 [node name="InteractArea" parent="Objetos/Tanga" instance=ExtResource("4_ylrrm")]
@@ -90,7 +91,7 @@ interact_type = "print_text"
 interact_value = "tanga"
 
 [node name="Taza" type="Sprite2D" parent="Objetos"]
-position = Vector2(178, 58)
+position = Vector2(220, 58)
 texture = ExtResource("8_8fj5k")
 
 [node name="InteractArea" parent="Objetos/Taza" instance=ExtResource("4_ylrrm")]
@@ -99,7 +100,7 @@ interact_type = "print_text"
 interact_value = "taza"
 
 [node name="Tijeras" type="Sprite2D" parent="Objetos"]
-position = Vector2(154, 72)
+position = Vector2(74, 66)
 texture = ExtResource("9_5w3ft")
 
 [node name="InteractArea" parent="Objetos/Tijeras" instance=ExtResource("4_ylrrm")]
@@ -108,7 +109,7 @@ interact_type = "print_text"
 interact_value = "tijeras"
 
 [node name="Tinte" type="Sprite2D" parent="Objetos"]
-position = Vector2(187, 25)
+position = Vector2(226, 106)
 texture = ExtResource("10_2bno4")
 
 [node name="InteractArea" parent="Objetos/Tinte" instance=ExtResource("4_ylrrm")]
@@ -117,16 +118,16 @@ interact_type = "print_text"
 interact_value = "tinte"
 
 [node name="Payaso" type="Sprite2D" parent="Objetos"]
-position = Vector2(189, 84)
+position = Vector2(170, 28)
 texture = ExtResource("11_qmnew")
 
 [node name="InteractArea" parent="Objetos/Payaso" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Payaso"
+interact_label = "[E] Disfraz de payaso"
 interact_type = "print_text"
 interact_value = "payaso"
 
 [node name="Pintapezuñas" type="Sprite2D" parent="Objetos"]
-position = Vector2(61, 63)
+position = Vector2(12, 28)
 texture = ExtResource("3_e24km")
 
 [node name="InteractArea" parent="Objetos/Pintapezuñas" instance=ExtResource("4_ylrrm")]
@@ -176,7 +177,7 @@ position = Vector2(240.5, 97.5)
 shape = SubResource("RectangleShape2D_do6wg")
 
 [node name="Cajeros" type="CollisionShape2D" parent="Hitboxes"]
-position = Vector2(39.5, 90)
+position = Vector2(38, 90)
 shape = SubResource("RectangleShape2D_os7tk")
 
 [node name="BordeIzquierdo" type="CollisionShape2D" parent="Hitboxes"]
@@ -194,3 +195,7 @@ shape = SubResource("RectangleShape2D_aikht")
 [node name="BordeSuperior" type="CollisionShape2D" parent="Hitboxes"]
 position = Vector2(143, 5)
 shape = SubResource("RectangleShape2D_dgxef")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+position = Vector2(143, 78)
+texture = ExtResource("2_jmvxi")
