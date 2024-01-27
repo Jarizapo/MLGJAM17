@@ -1,7 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bkef2oid0djle"]
+[gd_scene load_steps=19 format=3 uid="uid://bkef2oid0djle"]
 
 [ext_resource type="Texture2D" uid="uid://bpb0eprjt0k1k" path="res://recursos/Plano.png" id="1_bn1sm"]
 [ext_resource type="PackedScene" uid="uid://jbwkm8u1u0il" path="res://escenas/oveja.tscn" id="2_qfg6h"]
+[ext_resource type="PackedScene" uid="uid://2kpouvqggo3y" path="res://escenas/pezuña.tscn" id="3_ga4kj"]
+[ext_resource type="PackedScene" uid="uid://bfei0eroq0gnx" path="res://escenas/interact_area.tscn" id="4_ylrrm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owhp3"]
 size = Vector2(52, 13)
@@ -50,6 +52,9 @@ size = Vector2(286, 10)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("1_bn1sm")
+
+[node name="Pintapezuña" parent="." instance=ExtResource("3_ga4kj")]
+position = Vector2(58, 64)
 
 [node name="Oveja" parent="." instance=ExtResource("2_qfg6h")]
 position = Vector2(15, 67)
@@ -111,3 +116,9 @@ shape = SubResource("RectangleShape2D_aikht")
 [node name="BordeSuperior" type="CollisionShape2D" parent="Hitboxes"]
 position = Vector2(143, 5)
 shape = SubResource("RectangleShape2D_dgxef")
+
+[node name="InteractArea" parent="." instance=ExtResource("4_ylrrm")]
+position = Vector2(59, 65)
+interact_label = "Interaction Test"
+interact_type = "print_text"
+interact_value = 10
