@@ -98,6 +98,9 @@ func execute_interaction():
 			"print_text" :
 				add_object(cur_interaction.interact_value)
 				print(cur_interaction.interact_value)
+			"exit" :
+				print(1)
+				#get_tree().change_scene_to_file("res://escenas/historia/oveja_rosaleda.tscn")
 
 func add_object(object):
 	if(numberOfObjects < 2):
@@ -107,7 +110,6 @@ func add_object(object):
 				objectBeingCatched = $"../Objetos/Bombones"
 				if($"../Objetos/Bombones/InteractArea" != null):
 					$"../Objetos/Bombones/InteractArea".interact_label = ""
-				
 				if(areas.size() == 7):
 					areas.remove_at(6)
 				elif(areas.size() == 8):

@@ -199,3 +199,16 @@ shape = SubResource("RectangleShape2D_dgxef")
 [node name="Sombra" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("2_jmvxi")
+
+[node name="Salida" type="Sprite2D" parent="."]
+
+[node name="InteractArea" parent="Salida" instance=ExtResource("4_ylrrm")]
+
+[node name="Bombones" type="Sprite2D" parent="."]
+position = Vector2(32, 66)
+texture = ExtResource("5_e32vb")
+
+[node name="InteractArea" parent="Bombones" instance=ExtResource("4_ylrrm")]
+interact_label = "[E] Bombones"
+interact_type = "print_text"
+interact_value = "bombones"
