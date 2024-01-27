@@ -21,6 +21,12 @@ var numberOfObjects = 0
 func _ready():
 	update_interactions()
 
+func _process(delta):
+	if(numberOfObjects == 2):
+		for area in areas:
+			if(area != null):
+				area.interact_label = ""
+
 func _physics_process(delta):
 	velocity = Vector2(velocity.x-velocity.x/6, velocity.y-velocity.y/6)
 	
@@ -101,7 +107,11 @@ func add_object(object):
 				objectBeingCatched = $"../Objetos/Bombones"
 				if($"../Objetos/Bombones/InteractArea" != null):
 					$"../Objetos/Bombones/InteractArea".interact_label = ""
-				areas.remove_at(7)
+				
+				if(areas.size() == 7):
+					areas.remove_at(6)
+				elif(areas.size() == 8):
+					areas.remove_at(7)
 			"desatascador":
 				objects[6] = true
 				objectBeingCatched = $"../Objetos/Desatascador"
@@ -152,10 +162,6 @@ func add_object(object):
 				objectBeingCatched.transform.origin = Vector2(0,-12)
 			elif(numberOfObjects == 1):
 				objectBeingCatched.transform.origin = Vector2(0,-22)
-			
-			if(numberOfObjects == 2):
-				for area in areas:
-					if(area != null):
-						area.interact_label = ""
 						
-		numberOfObjects += 1
+	numberOfObjects += 1
+	print(numberOfObjects)

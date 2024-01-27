@@ -1,24 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://cx0xty7h4277e"]
+[gd_scene load_steps=8 format=3 uid="uid://cx0xty7h4277e"]
 
-[ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_aakwn"]
+[ext_resource type="Texture2D" uid="uid://yrx64vg386dn" path="res://recursos/fondos_narrativa/principal.png" id="1_372mx"]
 [ext_resource type="Texture2D" uid="uid://bb838x5trsawt" path="res://recursos/boton_jugar.png" id="2_pwpvl"]
 [ext_resource type="Texture2D" uid="uid://c33ucv2g61ca" path="res://recursos/boton_jugar_hover.png" id="3_3vn0e"]
 [ext_resource type="Texture2D" uid="uid://dblyx35l7sn0c" path="res://recursos/boton_jugar_pulsado.png" id="3_dyv0y"]
 [ext_resource type="Script" path="res://codigo/boton_jugar.gd" id="5_ssyrl"]
+[ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="6_krvth"]
+[ext_resource type="Script" path="res://codigo/PulsaContinuarPrincipal.gd" id="7_bytnw"]
 
 [node name="Principal" type="Sprite2D"]
 position = Vector2(143, 78)
-texture = ExtResource("1_aakwn")
+texture = ExtResource("1_372mx")
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_right = 8.0
 offset_bottom = 8.0
 
 [node name="TextureButton" type="TextureButton" parent="Button"]
 layout_mode = 0
-offset_right = 39.0
-offset_bottom = 13.0
+offset_left = -28.0
+offset_top = 34.0
+offset_right = 11.0
+offset_bottom = 47.0
 texture_normal = ExtResource("2_pwpvl")
 texture_pressed = ExtResource("3_dyv0y")
 texture_hover = ExtResource("3_3vn0e")
 script = ExtResource("5_ssyrl")
+
+[node name="PulsaContinuar" type="Label" parent="."]
+offset_left = -70.0
+offset_top = 44.0
+offset_right = 77.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("6_krvth")
+text = "PULSA [ESPACIO] PARA JUGAR"
+script = ExtResource("7_bytnw")

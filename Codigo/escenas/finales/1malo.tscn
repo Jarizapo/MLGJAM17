@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwg565qm8dav1"]
 
-[ext_resource type="Texture2D" uid="uid://uillw1wdfnnh" path="res://recursos/fondos_narrativa/carruaje.png" id="1_sewji"]
+[ext_resource type="Texture2D" uid="uid://b02mjuworngdy" path="res://recursos/fondos_narrativa/carruaje.png" id="1_sewji"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
 

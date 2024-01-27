@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b02mjuworngdy"
-path="res://.godot/imported/carruaje.png-74eb77b336a9099ebc799cd425965922.ctex"
+uid="uid://dbpn2fh1mbtls"
+path="res://.godot/imported/tanga_pintapezuñas.png-3ed708e5c389bc2571761cb4996896b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/fondos_narrativa/carruaje.png"
-dest_files=["res://.godot/imported/carruaje.png-74eb77b336a9099ebc799cd425965922.ctex"]
+source_file="res://recursos/fondos_narrativa/tanga_pintapezuñas.png"
+dest_files=["res://.godot/imported/tanga_pintapezuñas.png-3ed708e5c389bc2571761cb4996896b1.ctex"]
 
 [params]
 

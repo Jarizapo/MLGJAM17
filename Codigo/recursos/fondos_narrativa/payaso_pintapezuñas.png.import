@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b02mjuworngdy"
-path="res://.godot/imported/carruaje.png-74eb77b336a9099ebc799cd425965922.ctex"
+uid="uid://00ehgch8gbn2"
+path="res://.godot/imported/payaso_pintapezuñas.png-dc0878a28ae02ea276fcde5025fe6662.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/fondos_narrativa/carruaje.png"
-dest_files=["res://.godot/imported/carruaje.png-74eb77b336a9099ebc799cd425965922.ctex"]
+source_file="res://recursos/fondos_narrativa/payaso_pintapezuñas.png"
+dest_files=["res://.godot/imported/payaso_pintapezuñas.png-dc0878a28ae02ea276fcde5025fe6662.ctex"]
 
 [params]
 
