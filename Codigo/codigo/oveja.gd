@@ -73,52 +73,61 @@ func add_object(object):
 	if(numberOfObjects < 2):
 		match object:
 			"bombones":
-				objects.insert(5, true)
+				objects.insert(7, true)
 				objectBeingCatched = $"../Objetos/Bombones"
-				$"../Objetos/Bombones/InteractArea".interact_label = ""
+				if($"../Objetos/Bombones/InteractArea" != null):
+					$"../Objetos/Bombones/InteractArea".interact_label = ""
 				areas.remove_at(7)
 			"desatascador":
-				objects.insert(8, true)
+				objects.insert(6, true)
 				objectBeingCatched = $"../Objetos/Desatascador"
-				$"../Objetos/Desatascador/InteractArea".interact_label = ""
+				if($"../Objetos/Desatascador/InteractArea" != null):
+					$"../Objetos/Desatascador/InteractArea".interact_label = ""
 				areas.remove_at(6)
 			"payaso":
-				objects.insert(3, true)
+				objects.insert(5, true)
 				objectBeingCatched = $"../Objetos/Payaso"
-				$"../Objetos/Payaso/InteractArea".interact_label = ""
+				if($"../Objetos/Payaso/InteractArea" != null):
+					$"../Objetos/Payaso/InteractArea".interact_label = ""
 				areas.remove_at(5)
 			"pintapezuñas":
-				objects.insert(0, true)
+				objects.insert(4, true)
 				objectBeingCatched = $"../Objetos/Pintapezuñas"
-				$"../Objetos/Pintapezuñas/InteractArea".interact_label = ""
+				if($"../Objetos/Pintapezuñas/InteractArea" != null):
+					$"../Objetos/Pintapezuñas/InteractArea".interact_label = ""
 				areas.remove_at(4)
 			"tanga":
-				objects.insert(4, true)
+				objects.insert(3, true)
 				objectBeingCatched = $"../Objetos/Tanga"
-				$"../Objetos/Tanga/InteractArea".interact_label = ""
+				if($"../Objetos/Tanga/InteractArea" != null):
+					$"../Objetos/Tanga/InteractArea".interact_label = ""
 				areas.remove_at(3)
 			"taza":
-				objects.insert(6, true)
+				objects.insert(2, true)
 				objectBeingCatched = $"../Objetos/Taza"
-				$"../Objetos/Taza/InteractArea".interact_label = ""
+				if($"../Objetos/Taza/InteractArea" != null):
+					$"../Objetos/Taza/InteractArea".interact_label = ""
 				areas.remove_at(2)
 			"tijeras":
-				objects.insert(7, true)
+				objects.insert(1, true)
 				objectBeingCatched = $"../Objetos/Tijeras"
-				$"../Objetos/Tijeras/InteractArea".interact_label = ""
+				if($"../Objetos/Tijeras/InteractArea" != null):
+					$"../Objetos/Tijeras/InteractArea".interact_label = ""
 				areas.remove_at(1)
 			"tinte":
-				objects.insert(1, true)
+				objects.insert(0, true)
 				objectBeingCatched = $"../Objetos/Tinte"
-				$"../Objetos/Tinte/InteractArea".interact_label = ""
+				if($"../Objetos/Tinte/InteractArea" != null):
+					$"../Objetos/Tinte/InteractArea".interact_label = ""
 				areas.remove_at(0)
 		
-		objectBeingCatched.get_parent().remove_child(objectBeingCatched)
-		add_child(objectBeingCatched)
-		if(numberOfObjects == 0):
-			objectBeingCatched.transform.origin = Vector2(3,-10)
-		elif(numberOfObjects == 1):
-			objectBeingCatched.transform.origin = Vector2(3,-20)
+		if(objectBeingCatched != null):
+			objectBeingCatched.get_parent().remove_child(objectBeingCatched)
+			add_child(objectBeingCatched)
+			if(numberOfObjects == 0):
+				objectBeingCatched.transform.origin = Vector2(3,-10)
+			elif(numberOfObjects == 1):
+				objectBeingCatched.transform.origin = Vector2(3,-20)
 			
 			for area in areas:
 				if(area != null):

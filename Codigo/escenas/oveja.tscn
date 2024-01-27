@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://jbwkm8u1u0il"]
+[gd_scene load_steps=6 format=3 uid="uid://jbwkm8u1u0il"]
 
 [ext_resource type="Texture2D" uid="uid://b4vf3rh4a5s7i" path="res://recursos/Oveja.png" id="1_h2klv"]
 [ext_resource type="Script" path="res://codigo/oveja.gd" id="1_inyc6"]
+[ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="3_mkmqh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5k8v"]
 size = Vector2(12, 12)
@@ -33,6 +34,8 @@ offset_left = -27.0
 offset_top = -25.0
 offset_right = 29.0
 offset_bottom = -2.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mkmqh")
 horizontal_alignment = 1
 vertical_alignment = 1
 
