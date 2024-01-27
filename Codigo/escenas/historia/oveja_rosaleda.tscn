@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfvcrp4klgjbg"]
+[gd_scene load_steps=4 format=3 uid="uid://dfvcrp4klgjbg"]
 
 [ext_resource type="Texture2D" uid="uid://2upmnl1vf7dv" path="res://recursos/Plano_con_marco_para_jesus.png" id="1_2y0e8"]
+[ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="1_tgto0"]
 [ext_resource type="Script" path="res://codigo/PulsaContinuarRosaleda.gd" id="2_xm1m4"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
@@ -8,6 +9,7 @@
 [node name="Narrativa" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_tgto0")
 text = "Oveja en la rosaleda"
 
 [node name="Fondo" type="Sprite2D" parent="."]
@@ -19,5 +21,6 @@ offset_left = 24.0
 offset_top = 127.0
 offset_right = 258.0
 offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("1_tgto0")
 text = "Pulsa [Espacio] para continuar"
 script = ExtResource("2_xm1m4")

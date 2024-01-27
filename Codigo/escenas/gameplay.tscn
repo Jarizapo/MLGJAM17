@@ -61,6 +61,9 @@ size = Vector2(286, 10)
 position = Vector2(143, 78)
 texture = ExtResource("1_bn1sm")
 
+[node name="Oveja" parent="." instance=ExtResource("2_qfg6h")]
+position = Vector2(15, 67)
+
 [node name="Objetos" type="Node" parent="."]
 
 [node name="Bombones" type="Sprite2D" parent="Objetos"]
@@ -134,9 +137,6 @@ texture = ExtResource("3_e24km")
 interact_label = "[E] Pintapezuñas"
 interact_type = "print_text"
 interact_value = "pintapezuñas"
-
-[node name="Oveja" parent="." instance=ExtResource("2_qfg6h")]
-position = Vector2(15, 67)
 
 [node name="Hitboxes" type="StaticBody2D" parent="."]
 
