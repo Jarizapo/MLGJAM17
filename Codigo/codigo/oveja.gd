@@ -40,10 +40,25 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("interact"):
 		execute_interaction()
 		
+	var cadena
+		
 	if Input.is_action_just_pressed("finish_shopping"):
 		print(objects)
-		if(objects[0] || objects[4]) && (objects[3] || objects[4]):
-			get_tree().change_scene_to_file("res://escenas/finales/antienfado_antitristeza.tscn")
+		if((objects[0] || objects[4]) && (objects[3] || objects[5])):
+			# Aquí hay que hacer la diferencia entre si le regala el tinte o pintapezuñas
+			# Y si se disfraza de una cosa u otra (hay que hacer 4 escenas)
+			cadena = "res://escenas/finales/antienfado_antitristeza.tscn"
+		elif((objects[0] && objects[4]) || ((objects[0] || objects[4]) && (objects[2] || objects[7]))):
+			cadena = "res://escenas/finales/antienfado.tscn"
+		elif((objects[3] && objects[5]) || ((objects[3] || objects[5]) && (objects[2] || objects[7]))):
+			cadena = "res://escenas/finales/antitristeza.tscn"
+		elif(objects[2] && objects[7]):
+			cadena = "res://escenas/finales/nada.tscn"
+		elif(objects[1] && objects[6]):
+			cadena = "res://escenas/finales/2malo.tscn"
+		elif(objects[1] || objects[6]):
+			cadena = "res://escenas/finales/1malo.tscn"
+		get_tree().change_scene_to_file(cadena)
 
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
@@ -71,19 +86,19 @@ func add_object(object):
 	if(numberOfObjects < 2):
 		match object:
 			"bombones":
-				objects.set(7, true)
+				objects[7] = true
 				objectBeingCatched = $"../Objetos/Bombones"
 				if($"../Objetos/Bombones/InteractArea" != null):
 					$"../Objetos/Bombones/InteractArea".interact_label = ""
 				areas.remove_at(7)
 			"desatascador":
-				objects.set(6, true)
+				objects[6] = true
 				objectBeingCatched = $"../Objetos/Desatascador"
 				if($"../Objetos/Desatascador/InteractArea" != null):
 					$"../Objetos/Desatascador/InteractArea".interact_label = ""
 				areas.remove_at(6)
 			"payaso":
-				objects.set(5, true)
+				objects[5] = true
 				objectBeingCatched = $"../Objetos/Payaso"
 				if($"../Objetos/Payaso/InteractArea" != null):
 					$"../Objetos/Payaso/InteractArea".interact_label = ""
@@ -101,19 +116,19 @@ func add_object(object):
 					$"../Objetos/Tanga/InteractArea".interact_label = ""
 				areas.remove_at(3)
 			"taza":
-				objects.set(2, true)
+				objects[2] = true
 				objectBeingCatched = $"../Objetos/Taza"
 				if($"../Objetos/Taza/InteractArea" != null):
 					$"../Objetos/Taza/InteractArea".interact_label = ""
 				areas.remove_at(2)
 			"tijeras":
-				objects.set(1, true)
+				objects[1] = true
 				objectBeingCatched = $"../Objetos/Tijeras"
 				if($"../Objetos/Tijeras/InteractArea" != null):
 					$"../Objetos/Tijeras/InteractArea".interact_label = ""
 				areas.remove_at(1)
 			"tinte":
-				objects.set(0, true)
+				objects[0] = true
 				objectBeingCatched = $"../Objetos/Tinte"
 				if($"../Objetos/Tinte/InteractArea" != null):
 					$"../Objetos/Tinte/InteractArea".interact_label = ""
