@@ -30,8 +30,10 @@ func _physics_process(delta):
 		velocity.y -= speed
 	if(Input.is_action_pressed("left")):
 		velocity.x -= speed
+		$Sprite2D.flip_h = false
 	if(Input.is_action_pressed("right")):
 		velocity.x += speed
+		$Sprite2D.flip_h = true
 	
 	velocity.limit_length(30)
 
@@ -47,6 +49,14 @@ func _physics_process(delta):
 		if((objects[0] || objects[4]) && (objects[3] || objects[5])):
 			# Aquí hay que hacer la diferencia entre si le regala el tinte o pintapezuñas
 			# Y si se disfraza de una cosa u otra (hay que hacer 4 escenas)
+			#if(objects[0] && objects[3]):
+				#se pone la escena de tinte y tanga
+			#elif(objects[0] && objects[5]):
+				#se pone la escena de tinte y payaso
+			#elif(objects[4] && objects[3]):
+				#se pone la escena de pintapezunas y tanga
+			#elif(objects[4] && objects[5]):
+				#se pone la escena de pintapezuñas y payaso
 			cadena = "res://escenas/finales/antienfado_antitristeza.tscn"
 		elif((objects[0] && objects[4]) || ((objects[0] || objects[4]) && (objects[2] || objects[7]))):
 			cadena = "res://escenas/finales/antienfado.tscn"
@@ -58,6 +68,7 @@ func _physics_process(delta):
 			cadena = "res://escenas/finales/2malo.tscn"
 		elif(objects[1] || objects[6]):
 			cadena = "res://escenas/finales/1malo.tscn"
+		
 		get_tree().change_scene_to_file(cadena)
 
 func _on_interaction_area_area_entered(area):
@@ -138,9 +149,9 @@ func add_object(object):
 			objectBeingCatched.get_parent().remove_child(objectBeingCatched)
 			add_child(objectBeingCatched)
 			if(numberOfObjects == 0):
-				objectBeingCatched.transform.origin = Vector2(3,-10)
+				objectBeingCatched.transform.origin = Vector2(0,-12)
 			elif(numberOfObjects == 1):
-				objectBeingCatched.transform.origin = Vector2(3,-20)
+				objectBeingCatched.transform.origin = Vector2(0,-22)
 			
 			if(numberOfObjects == 2):
 				for area in areas:

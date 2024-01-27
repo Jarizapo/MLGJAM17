@@ -14,6 +14,7 @@ script = ExtResource("1_inyc6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_h2klv")
+flip_h = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n5k8v")
