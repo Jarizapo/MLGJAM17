@@ -4,10 +4,14 @@ extends CharacterBody2D
 @onready var interactLabel = $"Interaction Components/InteractLabel"
 
 var speed = 10.0
-var total_value_objects = 0
+var objects = []
+var objectBeingCatched
+var numberOfObjects = 0
 
 func _ready():
 	update_interactions()
+	objects.resize(8)
+	objects.fill(false)
 
 func _physics_process(delta):
 	velocity = Vector2(velocity.x-velocity.x/6, velocity.y-velocity.y/6)
@@ -29,8 +33,8 @@ func _physics_process(delta):
 		execute_interaction()
 		
 	if Input.is_action_just_pressed("finish_shopping"):
-		print(total_value_objects)
-		if(total_value_objects == 10):
+		print(objects)
+		if(objects[0] == true):
 			get_tree().change_scene_to_file("res://escenas/gameplay.tscn")
 
 func _on_interaction_area_area_entered(area):
@@ -52,8 +56,65 @@ func execute_interaction():
 		var cur_interaction = all_interactions[0]
 		match cur_interaction.interact_type:
 			"print_text" :
-				add_object_value(cur_interaction.interact_value)
+				add_object(cur_interaction.interact_value)
 				print(cur_interaction.interact_value)
 
-func add_object_value(value):
-	total_value_objects += value
+func add_object(object):
+	if(numberOfObjects < 2):
+		match object:
+			"bombones":
+				objects.insert(5, true)
+				objectBeingCatched = $"../Objetos/Bombones"
+				$"../Objetos/Bombones/InteractArea".interact_label = ""
+			"desatascador":
+				objects.insert(8, true)
+				objectBeingCatched = $"../Objetos/Desatascador"
+				$"../Objetos/Desatascador/InteractArea".interact_label = ""
+			"payaso":
+				objects.insert(3, true)
+				objectBeingCatched = $"../Objetos/Payaso"
+				$"../Objetos/Payaso/InteractArea".interact_label = ""
+			"pintapezuñas":
+				objects.insert(0, true)
+				objectBeingCatched = $"../Objetos/Pintapezuñas"
+				$"../Objetos/Pintapezuñas/InteractArea".interact_label = ""
+			"tanga":
+				objects.insert(4, true)
+				objectBeingCatched = $"../Objetos/Tanga"
+				$"../Objetos/Tanga/InteractArea".interact_label = ""
+			"taza":
+				objects.insert(6, true)
+				objectBeingCatched = $"../Objetos/Taza"
+				$"../Objetos/Taza/InteractArea".interact_label = ""
+			"tijeras":
+				objects.insert(7, true)
+				objectBeingCatched = $"../Objetos/Tijeras"
+				$"../Objetos/Tijeras/InteractArea".interact_label = ""
+			"tinte":
+				objects.insert(1, true)
+				objectBeingCatched = $"../Objetos/Tinte"
+				$"../Objetos/Tinte/InteractArea".interact_label = ""
+		
+		objectBeingCatched.get_parent().remove_child(objectBeingCatched)
+		add_child(objectBeingCatched)
+		if(numberOfObjects == 0):
+			objectBeingCatched.transform.origin = Vector2(3,-10)
+		elif(numberOfObjects == 1):
+			objectBeingCatched.transform.origin = Vector2(3,-20)
+			
+			var areas = [
+				$"../Objetos/Tinte/InteractArea",
+				$"../Objetos/Tijeras/InteractArea",
+				$"../Objetos/Taza/InteractArea",
+				$"../Objetos/Tanga/InteractArea",
+				$"../Objetos/Pintapezuñas/InteractArea",
+				$"../Objetos/Payaso/InteractArea",
+				$"../Objetos/Desatascador/InteractArea",
+				$"../Objetos/Bombones/InteractArea"
+			]
+			
+			for area in areas:
+				if(area != null):
+					area.interact_label = ""
+					
+		numberOfObjects += 1

@@ -60,80 +60,6 @@ size = Vector2(286, 10)
 position = Vector2(143, 78)
 texture = ExtResource("1_bn1sm")
 
-[node name="Objetos" type="Node" parent="."]
-
-[node name="Bombones" type="Sprite2D" parent="Objetos"]
-position = Vector2(125, 27)
-texture = ExtResource("5_e32vb")
-
-[node name="InteractArea" parent="Objetos/Bombones" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Bombones"
-interact_type = "print_text"
-interact_value = "bombones"
-
-[node name="Desatascador" type="Sprite2D" parent="Objetos"]
-position = Vector2(167, 26)
-texture = ExtResource("6_hti0l")
-
-[node name="InteractArea" parent="Objetos/Desatascador" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Desatascador"
-interact_type = "print_text"
-interact_value = "desatascador"
-
-[node name="Tanga" type="Sprite2D" parent="Objetos"]
-position = Vector2(127, 63)
-texture = ExtResource("7_r2b22")
-
-[node name="InteractArea" parent="Objetos/Tanga" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Tanga"
-interact_type = "print_text"
-interact_value = "tanga"
-
-[node name="Taza" type="Sprite2D" parent="Objetos"]
-position = Vector2(178, 58)
-texture = ExtResource("8_8fj5k")
-
-[node name="InteractArea" parent="Objetos/Taza" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Taza"
-interact_type = "print_text"
-interact_value = "taza"
-
-[node name="Tijeras" type="Sprite2D" parent="Objetos"]
-position = Vector2(154, 72)
-texture = ExtResource("9_5w3ft")
-
-[node name="InteractArea" parent="Objetos/Tijeras" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Tijeras"
-interact_type = "print_text"
-interact_value = "tijeras"
-
-[node name="Tinte" type="Sprite2D" parent="Objetos"]
-position = Vector2(187, 25)
-texture = ExtResource("10_2bno4")
-
-[node name="InteractArea" parent="Objetos/Tinte" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Tinte"
-interact_type = "print_text"
-interact_value = "tinte"
-
-[node name="Payaso" type="Sprite2D" parent="Objetos"]
-position = Vector2(189, 84)
-texture = ExtResource("11_qmnew")
-
-[node name="InteractArea" parent="Objetos/Payaso" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Payaso"
-interact_type = "print_text"
-interact_value = "payaso"
-
-[node name="Pintapezuñas" type="Sprite2D" parent="Objetos"]
-position = Vector2(61, 63)
-texture = ExtResource("3_e24km")
-
-[node name="InteractArea" parent="Objetos/Pintapezuñas" instance=ExtResource("4_ylrrm")]
-interact_label = "[E] Pintapezuñas"
-interact_type = "print_text"
-interact_value = "pintapezuñas"
-
 [node name="Oveja" parent="." instance=ExtResource("2_qfg6h")]
 position = Vector2(15, 67)
 
@@ -194,3 +120,55 @@ shape = SubResource("RectangleShape2D_aikht")
 [node name="BordeSuperior" type="CollisionShape2D" parent="Hitboxes"]
 position = Vector2(143, 5)
 shape = SubResource("RectangleShape2D_dgxef")
+
+[node name="Pintapezuñas" type="Sprite2D" parent="."]
+position = Vector2(61, 63)
+texture = ExtResource("3_e24km")
+
+[node name="InteractArea" parent="Pintapezuñas" instance=ExtResource("4_ylrrm")]
+interact_label = "Interaction Test"
+interact_type = "print_text"
+
+[node name="Objetos" type="Node" parent="."]
+
+[node name="Bombones" type="Sprite2D" parent="Objetos"]
+position = Vector2(125, 27)
+texture = ExtResource("5_e32vb")
+
+[node name="InteractArea" parent="Objetos/Bombones" instance=ExtResource("4_ylrrm")]
+
+[node name="Desatascador" type="Sprite2D" parent="Objetos"]
+position = Vector2(167, 26)
+texture = ExtResource("6_hti0l")
+
+[node name="InteractArea" parent="Objetos/Desatascador" instance=ExtResource("4_ylrrm")]
+
+[node name="Tanga" type="Sprite2D" parent="Objetos"]
+position = Vector2(127, 63)
+texture = ExtResource("7_r2b22")
+
+[node name="InteractArea" parent="Objetos/Tanga" instance=ExtResource("4_ylrrm")]
+
+[node name="Taza" type="Sprite2D" parent="Objetos"]
+position = Vector2(178, 58)
+texture = ExtResource("8_8fj5k")
+
+[node name="InteractArea" parent="Objetos/Taza" instance=ExtResource("4_ylrrm")]
+
+[node name="Tijeras" type="Sprite2D" parent="Objetos"]
+position = Vector2(154, 72)
+texture = ExtResource("9_5w3ft")
+
+[node name="InteractArea" parent="Objetos/Tijeras" instance=ExtResource("4_ylrrm")]
+
+[node name="Tinte" type="Sprite2D" parent="Objetos"]
+position = Vector2(187, 25)
+texture = ExtResource("10_2bno4")
+
+[node name="InteractArea" parent="Objetos/Tinte" instance=ExtResource("4_ylrrm")]
+
+[node name="Payaso" type="Sprite2D" parent="Objetos"]
+position = Vector2(189, 84)
+texture = ExtResource("11_qmnew")
+
+[node name="InteractArea" parent="Objetos/Payaso" instance=ExtResource("4_ylrrm")]

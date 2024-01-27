@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgc8lmds264uh"
-path="res://.godot/imported/Pintapezunas.png-842cc1dc57f945b103f0153fc7c03215.ctex"
+uid="uid://rxwg0qko82kd"
+path="res://.godot/imported/Tanga.png-20811afa0fc16abf87b81bc7beec06a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/Pintapezunas.png"
-dest_files=["res://.godot/imported/Pintapezunas.png-842cc1dc57f945b103f0153fc7c03215.ctex"]
+source_file="res://recursos/sprites_y_tiles/objetos/Tanga.png"
+dest_files=["res://.godot/imported/Tanga.png-20811afa0fc16abf87b81bc7beec06a2.ctex"]
 
 [params]
 

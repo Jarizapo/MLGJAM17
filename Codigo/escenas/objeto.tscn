@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb3xeryt6hi7w"]
+
+[ext_resource type="Texture2D" uid="uid://c18lx7ilxen4s" path="res://recursos/sprites_y_tiles/objetos/Bombones.png" id="1_w22nb"]
+
+[node name="Pintapezuña" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w22nb")
