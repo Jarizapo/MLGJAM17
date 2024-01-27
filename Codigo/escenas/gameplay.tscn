@@ -1,0 +1,113 @@
+[gd_scene load_steps=17 format=3 uid="uid://bkef2oid0djle"]
+
+[ext_resource type="Texture2D" uid="uid://bpb0eprjt0k1k" path="res://recursos/Plano.png" id="1_bn1sm"]
+[ext_resource type="PackedScene" uid="uid://jbwkm8u1u0il" path="res://escenas/oveja.tscn" id="2_qfg6h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owhp3"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oc33g"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vbf6"]
+size = Vector2(13, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrlel"]
+size = Vector2(104, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3guc"]
+size = Vector2(156, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg8pb"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yytem"]
+size = Vector2(52.5, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46cxd"]
+size = Vector2(65, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_do6wg"]
+size = Vector2(65, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_os7tk"]
+size = Vector2(27, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjd5g"]
+size = Vector2(1, 156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33exq"]
+size = Vector2(1, 156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aikht"]
+size = Vector2(26, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgxef"]
+size = Vector2(286, 10)
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(143, 78)
+texture = ExtResource("1_bn1sm")
+
+[node name="Oveja" parent="." instance=ExtResource("2_qfg6h")]
+position = Vector2(15, 67)
+
+[node name="Hitboxes" type="StaticBody2D" parent="."]
+
+[node name="EstanteriaPrincipioSuperior" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(26, 45.5)
+shape = SubResource("RectangleShape2D_owhp3")
+
+[node name="EstanteriaPrincipioInferior" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(26, 110.5)
+shape = SubResource("RectangleShape2D_oc33g")
+
+[node name="EstanteríaVertical" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(84.5, 40.5)
+shape = SubResource("RectangleShape2D_8vbf6")
+
+[node name="EstanteríaInferiorIzquierda" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(52, 151)
+shape = SubResource("RectangleShape2D_hrlel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(208, 151)
+shape = SubResource("RectangleShape2D_j3guc")
+
+[node name="EstanteríaSuperiorIzquierdaParteDerecha" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(143, 45.5)
+shape = SubResource("RectangleShape2D_mg8pb")
+
+[node name="EstanteríaInferiorIzquierdaParteDerecha" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(142.75, 97)
+shape = SubResource("RectangleShape2D_yytem")
+
+[node name="EstanteríaSuperiorDerechaParteDerecha" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(227.5, 45.5)
+shape = SubResource("RectangleShape2D_46cxd")
+
+[node name="EstanteríaInferiorDerechaParteDerecha" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(240.5, 97.5)
+shape = SubResource("RectangleShape2D_do6wg")
+
+[node name="Cajeros" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(39.5, 90)
+shape = SubResource("RectangleShape2D_os7tk")
+
+[node name="BordeIzquierdo" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(-0.5, 78)
+shape = SubResource("RectangleShape2D_tjd5g")
+
+[node name="BordeDerecho" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(286.5, 78)
+shape = SubResource("RectangleShape2D_33exq")
+
+[node name="BordeInferior" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(117, 156.5)
+shape = SubResource("RectangleShape2D_aikht")
+
+[node name="BordeSuperior" type="CollisionShape2D" parent="Hitboxes"]
+position = Vector2(143, 5)
+shape = SubResource("RectangleShape2D_dgxef")
