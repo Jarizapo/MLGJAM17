@@ -129,8 +129,9 @@ func add_object(object):
 			elif(numberOfObjects == 1):
 				objectBeingCatched.transform.origin = Vector2(3,-20)
 			
-			for area in areas:
-				if(area != null):
-					area.interact_label = ""
-					
+			if(numberOfObjects == 2):
+				for area in areas:
+					if(area != null):
+						area.interact_label = ""
+						
 		numberOfObjects += 1
