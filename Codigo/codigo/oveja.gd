@@ -87,7 +87,9 @@ func _physics_process(delta):
 func finish_shoppings():
 	var cadena
 	
-	if(objects[1] || objects[6]):
+	if(objects[1] && objects[6]):
+		cadena = "res://escenas/finales/2malo.tscn"
+	elif(objects[1] || objects[6]):
 		cadena = "res://escenas/finales/1malo.tscn"
 	elif((objects[0] || objects[4]) && (objects[3] || objects[5])):
 		# Aquí hay que hacer la diferencia entre si le regala el tinte o pintapezuñas
@@ -111,8 +113,6 @@ func finish_shoppings():
 		cadena = "res://escenas/finales/antitristeza.tscn"
 	elif(objects[2] && objects[7]):
 		cadena = "res://escenas/finales/nada.tscn"
-	elif(objects[1] && objects[6]):
-		cadena = "res://escenas/finales/2malo.tscn"
 	
 	get_tree().change_scene_to_file(cadena)
 
