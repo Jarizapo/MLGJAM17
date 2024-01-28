@@ -222,16 +222,20 @@ position = Vector2(25, 78)
 
 [node name="cogeObjeto" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_vwfob")
+volume_db = 20.0
 
 [node name="caminar" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_lshv4")
+volume_db = 20.0
 
 [node name="ratadona" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_mtuns")
+volume_db = 20.0
 
 [node name="ratitas" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_r5are")
+volume_db = 20.0
 
 [node name="ratadonafondo" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_rirua")
-volume_db = -15.0
+volume_db = 5.0

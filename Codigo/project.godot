@@ -19,6 +19,7 @@ config/icon="res://recursos/OvejaProta.svg"
 
 window/size/viewport_width=286
 window/size/viewport_height=156
+window/size/mode=3
 window/size/window_width_override=1144
 window/size/window_height_override=624
 window/stretch/mode="viewport"
