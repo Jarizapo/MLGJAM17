@@ -7,6 +7,7 @@
 [node name="BaseParaNarrativa" type="Node2D"]
 
 [node name="Fondo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.647059)
 position = Vector2(143, 78)
 texture = ExtResource("1_s8d17")
 
@@ -30,6 +31,16 @@ theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fsw8g")
 text = "Has podido ver al Málaga ganar en la Rosaleda y has
-salvado tu relanación. El pintapezuñas le ha encantado y el
-maquillaje le ha sacado una carcajada. Esta noche conthareis
-ovejitas juntos, terminando felices y comiendo maíces."
+salvado tu relanación. El pintapezuñas le ha quitado el
+enfado y el diszfraz le ha sacado una carcajada."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 31.0
+offset_top = 112.0
+offset_right = 449.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fsw8g")
+text = "          Esta noche conthareis ovejitas juntos,
+        terminando felices y comiendo maíces"

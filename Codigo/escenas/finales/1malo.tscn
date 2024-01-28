@@ -7,6 +7,7 @@
 [node name="BaseParaNarrativa" type="Node2D"]
 
 [node name="Fondo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.647059)
 position = Vector2(143, 78)
 texture = ExtResource("1_sewji")
 
@@ -44,17 +45,18 @@ theme_override_fonts/font = ExtResource("2_hgbh5")
 text = "
 Te pide un tiempo y te vas a casa de tus ovepadres.
 Un día decides visitarla para llevarle uno de esos
-pintapezuñas que tanto le gustan, cuando adviertes el
-carruaje de tu vecino Juan aparcado delante de casa."
+pintapezuñas que tanto le gustan, cuando ves el carruaje
+                  de tu vecino Juan  aparcado
+                     delante de casa."
 
 [node name="Narrativa3" type="Label" parent="."]
 offset_left = 4.0
-offset_top = 84.0
+offset_top = 96.0
 offset_right = 279.0
-offset_bottom = 209.0
+offset_bottom = 221.0
 theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_hgbh5")
 text = "
-Te planteas que decisiones has tomado que te han llevado
-a esta situación."
+Te planteas qué decisiones has tomado que
+te han llevado a esta situación."

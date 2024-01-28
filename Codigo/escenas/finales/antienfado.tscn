@@ -7,6 +7,7 @@
 [node name="BaseParaNarrativa" type="Node2D"]
 
 [node name="Fondo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.647059)
 position = Vector2(143, 78)
 texture = ExtResource("1_prikq")
 
@@ -23,13 +24,16 @@ script = ExtResource("2_8oenl")
 
 [node name="Narrativa" type="Label" parent="."]
 offset_left = 4.0
-offset_top = -2.0
+offset_top = 16.0
 offset_right = 1085.0
-offset_bottom = 73.0
+offset_bottom = 109.0
 theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2t7d1")
 text = "Esta noche dormirás en casa, pero nunca podrás olvidar
 que el único que le hizo reír aquel día, fue tu vecino Juan.
+
+No sabes bien qué le hizo tanta gracia, pero salían muchas
+carcajadas de tu dormitorio.
 
 "
