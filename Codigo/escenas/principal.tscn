@@ -33,6 +33,7 @@ offset_left = -70.0
 offset_top = 44.0
 offset_right = 77.0
 offset_bottom = 67.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_krvth")
 text = "PULSA [ESPACIO] PARA JUGAR"
 script = ExtResource("7_bytnw")

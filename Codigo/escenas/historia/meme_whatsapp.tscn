@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckp5blpiaxig6"]
 
 [ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="1_r87lh"]
-[ext_resource type="Script" path="res://codigo/PulsaContinuarWhatsapp.gd" id="2_e6vfj"]
 [ext_resource type="Texture2D" uid="uid://bdxdqjkhoh6xa" path="res://recursos/fondos_narrativa/whatsapp.png" id="2_k6gvs"]
+[ext_resource type="Script" path="res://codigo/PulsaContinuarWhatsapp2.gd" id="3_vb446"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
+position = Vector2(0, -18)
 
 [node name="Narrativa" type="Label" parent="."]
 offset_right = 40.0
@@ -13,31 +14,36 @@ theme_override_fonts/font = ExtResource("1_r87lh")
 text = "Meme whatsapp"
 
 [node name="Fondo" type="Sprite2D" parent="."]
-position = Vector2(143, 78)
+position = Vector2(153, 128)
+scale = Vector2(2, 2)
 texture = ExtResource("2_k6gvs")
 
 [node name="PulsaContinuar" type="Label" parent="."]
-offset_left = 24.0
-offset_top = 127.0
-offset_right = 258.0
-offset_bottom = 150.0
+offset_left = 96.0
+offset_top = 157.0
+offset_right = 330.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 0.305882, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
 text = "Pulsa [Espacio] para continuar"
-script = ExtResource("2_e6vfj")
+script = ExtResource("3_vb446")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 89.0
-offset_top = 11.0
-offset_right = 169.0
-offset_bottom = 34.0
+offset_left = 40.0
+offset_top = 15.0
+offset_right = 124.0
+offset_bottom = 41.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
+theme_override_font_sizes/font_size = 32
 text = "WOOLAPP"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 106.0
-offset_top = 32.0
-offset_right = 154.0
-offset_bottom = 47.0
+offset_left = 75.0
+offset_top = 48.0
+offset_right = 123.0
+offset_bottom = 63.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
 text = "Mi ovejita"
@@ -52,104 +58,46 @@ theme_override_font_sizes/font_size = 8
 text = "♥"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 320.0
-offset_top = 2.0
-offset_right = 454.0
-offset_bottom = 25.0
+offset_left = 75.0
+offset_top = 63.0
+offset_right = 209.0
+offset_bottom = 86.0
 theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
 text = "DÓNDE ESTAS....."
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 106.0
-offset_top = 51.0
-offset_right = 275.0
-offset_bottom = 74.0
+offset_left = 75.0
+offset_top = 88.0
+offset_right = 244.0
+offset_bottom = 111.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
-text = "Mr. Pancakes"
+text = "Mr. Pancakes, hijo fav"
 
 [node name="Label5" type="Label" parent="."]
-offset_left = 312.0
-offset_top = 91.0
-offset_right = 597.0
-offset_bottom = 114.0
+offset_left = 75.0
+offset_top = 100.0
+offset_right = 360.0
+offset_bottom = 123.0
 theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
 text = "Más te vale recordar el laniversario..."
 
 [node name="Label6" type="Label" parent="."]
-offset_left = 105.0
-offset_top = 73.0
-offset_right = 231.0
-offset_bottom = 96.0
+offset_left = 76.0
+offset_top = 126.0
+offset_right = 202.0
+offset_bottom = 149.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
 text = "Asvik Sorrend III"
 
 [node name="Label7" type="Label" parent="."]
-offset_left = 292.0
-offset_top = 164.0
-offset_right = 544.0
-offset_bottom = 187.0
+offset_left = 76.0
+offset_top = 141.0
+offset_right = 328.0
+offset_bottom = 164.0
 theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
 theme_override_fonts/font = ExtResource("1_r87lh")
 text = "Está enfadada y triste, tú verás..."
-
-[node name="Label8" type="Label" parent="."]
-offset_left = 105.0
-offset_top = 93.0
-offset_right = 203.0
-offset_bottom = 116.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_r87lh")
-text = "Saca dineros"
-
-[node name="Label9" type="Label" parent="."]
-offset_left = 266.0
-offset_top = 218.0
-offset_right = 541.0
-offset_bottom = 267.0
-theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
-theme_override_fonts/font = ExtResource("1_r87lh")
-text = "Hazla reír o date por ovejimuerto.
-Y no te olvides de m trigo prémium."
-
-[node name="Label10" type="Label" parent="."]
-offset_left = 106.0
-offset_top = 110.0
-offset_right = 201.0
-offset_bottom = 133.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_r87lh")
-text = "Juan Vecino "
-
-[node name="Label11" type="Label" parent="."]
-offset_left = 267.0
-offset_top = 305.0
-offset_right = 565.0
-offset_bottom = 354.0
-theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
-theme_override_fonts/font = ExtResource("1_r87lh")
-text = "Donde has comprado tus sabanas, son
-muy suavitas jejjjeeje"
-
-[node name="Label12" type="Label" parent="."]
-offset_left = 104.0
-offset_top = 131.0
-offset_right = 206.0
-offset_bottom = 154.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_r87lh")
-text = "Iván Butanos"
-
-[node name="Label13" type="Label" parent="."]
-offset_left = 106.0
-offset_top = 141.0
-offset_right = 386.0
-offset_bottom = 190.0
-theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
-theme_override_fonts/font = ExtResource("1_r87lh")
-theme_override_font_sizes/font_size = 12
-text = "Te vendo el kilo a cinco ratieuros, ya
-me dices"

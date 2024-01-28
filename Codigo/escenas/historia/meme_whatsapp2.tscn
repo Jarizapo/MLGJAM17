@@ -1,0 +1,128 @@
+[gd_scene load_steps=4 format=3 uid="uid://h2xcqbxv51s6"]
+
+[ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="1_enuv3"]
+[ext_resource type="Texture2D" uid="uid://bdxdqjkhoh6xa" path="res://recursos/fondos_narrativa/whatsapp.png" id="2_e5r11"]
+[ext_resource type="Script" path="res://codigo/PulsaContinuarWhats2.gd" id="3_dfney"]
+
+[node name="BaseParaNarrativa" type="Node2D"]
+position = Vector2(0, -29)
+
+[node name="Narrativa" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Meme whatsapp"
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(153, 12)
+scale = Vector2(2, 2)
+texture = ExtResource("2_e5r11")
+
+[node name="PulsaContinuarWhats2" type="Label" parent="."]
+offset_left = 78.0
+offset_top = 169.0
+offset_right = 221.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(1, 0.305882, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Pulsa [Espacio] para continuar"
+script = ExtResource("3_dfney")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 9.0
+offset_right = 202.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Asvik Sorrend III"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 23.0
+offset_right = 328.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Está enfadada y triste, tú verás..."
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 47.0
+offset_right = 174.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Saca dineros"
+
+[node name="Label9" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 57.0
+offset_right = 351.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Hazla reír o date por ovejimuerto."
+
+[node name="Label14" type="Label" parent="Label9"]
+offset_top = 9.0
+offset_right = 275.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Y no te olvides de mi  trigo prémium.
+"
+
+[node name="Label10" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 89.0
+offset_right = 171.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Juan Vecino "
+
+[node name="Label11" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 99.0
+offset_right = 374.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Donde has comprado tus sabanas, son"
+
+[node name="Label14" type="Label" parent="Label11"]
+offset_top = -7.0
+offset_right = 298.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "
+muy suavitas jejjjeeje"
+
+[node name="Label12" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 129.0
+offset_right = 178.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Iván Butanos"
+
+[node name="Label13" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 138.0
+offset_right = 255.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "Te vendo el kilo a cinco ratieuros, ya"
+
+[node name="Label14" type="Label" parent="Label13"]
+offset_top = 9.0
+offset_right = 38.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("1_enuv3")
+text = "me dices"

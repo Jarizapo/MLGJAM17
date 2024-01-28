@@ -17,10 +17,12 @@ position = Vector2(143, 78)
 texture = ExtResource("2_ytsu1")
 
 [node name="PulsaContinuar" type="Label" parent="."]
-offset_left = 24.0
-offset_top = 127.0
-offset_right = 258.0
-offset_bottom = 150.0
+offset_left = 6.0
+offset_top = 138.0
+offset_right = 240.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 0.305882, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_tgto0")
 text = "Pulsa [Espacio] para continuar"
 script = ExtResource("2_xm1m4")
