@@ -9,8 +9,8 @@ size = Vector2(12, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8u5bi"]
 
-[sub_resource type="Animation" id="Animation_pdmus"]
-resource_name = "idle"
+[sub_resource type="Animation" id="Animation_jgbes"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -24,8 +24,8 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_jgbes"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_pdmus"]
+resource_name = "idle"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
