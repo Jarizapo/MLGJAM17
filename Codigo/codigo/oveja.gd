@@ -172,6 +172,8 @@ func add_object(object):
 					$"../Objetos/Tinte/InteractArea".interact_label = ""
 				areas.remove_at(0)
 		
+		
+		
 		if(objectBeingCatched != null):
 			objectBeingCatched.get_parent().remove_child(objectBeingCatched)
 			add_child(objectBeingCatched)
