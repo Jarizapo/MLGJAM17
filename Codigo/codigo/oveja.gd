@@ -62,15 +62,18 @@ func finish_shoppings():
 	if((objects[0] || objects[4]) && (objects[3] || objects[5])):
 		# Aquí hay que hacer la diferencia entre si le regala el tinte o pintapezuñas
 		# Y si se disfraza de una cosa u otra (hay que hacer 4 escenas)
-		#if(objects[0] && objects[3]):
+		if(objects[0] && objects[3]):
 			#se pone la escena de tinte y tanga
-		#elif(objects[0] && objects[5]):
+			cadena = "res://escenas/finales/tinte_tanga.tscn"
+		elif(objects[0] && objects[5]):
 			#se pone la escena de tinte y payaso
-		#elif(objects[4] && objects[3]):
+			cadena = "res://escenas/finales/tinte_payaso.tscn"
+		elif(objects[4] && objects[3]):
 			#se pone la escena de pintapezunas y tanga
-		#elif(objects[4] && objects[5]):
+			cadena = "res://escenas/finales/pintapezunas_tanga.tscn"
+		elif(objects[4] && objects[5]):
 			#se pone la escena de pintapezuñas y payaso
-		cadena = "res://escenas/finales/antienfado_antitristeza.tscn"
+			cadena = "res://escenas/finales/pintapezuna_payaso.tscn"
 	
 	elif((objects[0] && objects[4]) || ((objects[0] || objects[4]) && (objects[2] || objects[7]))):
 		cadena = "res://escenas/finales/antienfado.tscn"

@@ -1,6 +1,6 @@
 [gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://cdeg8lcup3cvq"]
 
-[ext_resource type="FontFile" uid="uid://dqkbix63hxs1n" path="res://MLGJAM17.ttf" id="1_d3d4w"]
+[ext_resource type="FontFile" uid="uid://biu2mdxs55bg0" path="res://MLGJAM17Enye.ttf" id="1_8j7d0"]
 
 [resource]
-base_font = ExtResource("1_d3d4w")
+base_font = ExtResource("1_8j7d0")
