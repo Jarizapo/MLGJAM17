@@ -59,7 +59,9 @@ func finish_shoppings():
 	var cadena
 		
 	print(objects)
-	if((objects[0] || objects[4]) && (objects[3] || objects[5])):
+	if(objects[1] || objects[6]):
+		cadena = "res://escenas/finales/1malo.tscn"
+	elif((objects[0] || objects[4]) && (objects[3] || objects[5])):
 		# Aquí hay que hacer la diferencia entre si le regala el tinte o pintapezuñas
 		# Y si se disfraza de una cosa u otra (hay que hacer 4 escenas)
 		if(objects[0] && objects[3]):
@@ -83,8 +85,6 @@ func finish_shoppings():
 		cadena = "res://escenas/finales/nada.tscn"
 	elif(objects[1] && objects[6]):
 		cadena = "res://escenas/finales/2malo.tscn"
-	elif(objects[1] || objects[6]):
-		cadena = "res://escenas/finales/1malo.tscn"
 	
 	get_tree().change_scene_to_file(cadena)
 
