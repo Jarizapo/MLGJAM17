@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcu5p72bvphx1"]
+[gd_scene load_steps=4 format=3 uid="uid://bcu5p72bvphx1"]
 
-[ext_resource type="FontFile" uid="uid://dqkbix63hxs1n" path="res://MLGJAM17.ttf" id="1_thtpb"]
 [ext_resource type="Texture2D" uid="uid://83cdtmqtmb1" path="res://recursos/fondos_narrativa/ratadona.png" id="2_7udyl"]
 [ext_resource type="Script" path="res://codigo/PulsaContinuarRatadona.gd" id="2_ny0pv"]
 [ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="3_yy22s"]
@@ -8,6 +7,7 @@
 [node name="BaseParaNarrativa" type="Node2D"]
 
 [node name="Fondo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.470588)
 position = Vector2(143, 78)
 texture = ExtResource("2_7udyl")
 
@@ -23,17 +23,35 @@ text = "Pulsa [Espacio] para continuar"
 script = ExtResource("2_ny0pv")
 
 [node name="Narrativa" type="Label" parent="."]
-offset_left = 22.0
-offset_top = 3.0
-offset_right = 1013.0
-offset_bottom = 80.0
+offset_left = 24.0
+offset_top = 6.0
+offset_right = 1015.0
+offset_bottom = 115.0
 theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_thtpb")
-text = "En un intento desesperado
-por salvar su
-relanación, la ovejita 
-coquette acude como 
-último recurso al Ratadona más cercano en
-Ratatown a las tantas de la noche, ya que no 
-queda ninguna otra tienda abierta. "
+theme_override_fonts/font = ExtResource("3_yy22s")
+text = "En un último intento
+acudes toda coquette
+al primer Ratadona 
+que te encuentras."
+
+[node name="Narrativa3" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 77.0
+offset_right = 1016.0
+offset_bottom = 186.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yy22s")
+text = "Cruzas tus pezuñas esperando encontrar algo."
+
+[node name="Narrativa2" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 93.0
+offset_right = 1015.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(1, 0.329412, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yy22s")
+text = "Coge dos regalos y acércate a la entrada donde
+las cajas para terminar."

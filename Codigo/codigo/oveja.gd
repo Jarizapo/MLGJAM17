@@ -21,6 +21,12 @@ var numberOfObjects = 0
 
 @onready var animation = $AnimationPlayer
 
+@onready var cogeObjeto = $"../cogeObjeto"
+@onready var caminar = $"../caminar"
+@onready var ratadona = $"../ratadona"
+@onready var ratitas = $"../ratitas"
+@onready var ratadonafondo = $"../ratadonafondo"
+
 func _ready():
 	update_interactions()
 
@@ -29,6 +35,18 @@ func _process(delta):
 		for area in areas:
 			if(area != null):
 				area.interact_label = ""
+	
+	if(!ratadonafondo.is_playing()):
+		ratadonafondo.play()
+
+	if(randi() % 1200 == 19):
+		if(!ratadona.is_playing()):
+			ratadona.play()
+	
+	if(randi() % 1200 == 12):
+		if(!ratitas.is_playing()):
+			ratitas.play()
+	
 
 func _physics_process(delta):
 	velocity = Vector2(velocity.x-velocity.x/6, velocity.y-velocity.y/6)
@@ -36,17 +54,28 @@ func _physics_process(delta):
 	if(Input.is_action_pressed("down")):
 		velocity.y += speed
 		animation.play("moving")
+		if(!caminar.is_playing()):
+			caminar.play()
 	if(Input.is_action_pressed("up")):
 		velocity.y -= speed
 		animation.play("moving")
+		if(!caminar.is_playing()):
+			caminar.play()
 	if(Input.is_action_pressed("left")):
 		velocity.x -= speed
 		animation.play("moving")
 		$Sprite2D.flip_h = true
+		if(!caminar.is_playing()):
+			caminar.play()
 	if(Input.is_action_pressed("right")):
 		velocity.x += speed
 		animation.play("moving")
 		$Sprite2D.flip_h = false
+		if(!caminar.is_playing()):
+			caminar.play()
+	
+	if(!Input.is_action_pressed("down") && !Input.is_action_pressed("up") && !Input.is_action_pressed("right") && !Input.is_action_pressed("left")):
+		caminar.stop()
 	
 	velocity.limit_length(30)
 
@@ -57,8 +86,7 @@ func _physics_process(delta):
 		
 func finish_shoppings():
 	var cadena
-		
-	print(objects)
+	
 	if(objects[1] || objects[6]):
 		cadena = "res://escenas/finales/1malo.tscn"
 	elif((objects[0] || objects[4]) && (objects[3] || objects[5])):
@@ -119,6 +147,7 @@ func execute_interaction():
 
 func add_object(object):
 	if(numberOfObjects < 2):
+		cogeObjeto.play()
 		match object:
 			"bombones":
 				objects[7] = true
@@ -171,8 +200,6 @@ func add_object(object):
 				if($"../Objetos/Tinte/InteractArea" != null):
 					$"../Objetos/Tinte/InteractArea".interact_label = ""
 				areas.remove_at(0)
-		
-		
 		
 		if(objectBeingCatched != null):
 			objectBeingCatched.get_parent().remove_child(objectBeingCatched)

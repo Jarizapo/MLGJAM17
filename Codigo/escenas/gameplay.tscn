@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bkef2oid0djle"]
+[gd_scene load_steps=34 format=3 uid="uid://bkef2oid0djle"]
 
 [ext_resource type="Texture2D" uid="uid://b7kt0h1mfo8n2" path="res://recursos/Plano.png" id="1_bn1sm"]
 [ext_resource type="Texture2D" uid="uid://ciiotsar3xlfn" path="res://recursos/Plano2.png" id="2_jmvxi"]
@@ -12,6 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://c6fbh0hemld7m" path="res://recursos/sprites_y_tiles/objetos/Tijeras.png" id="9_5w3ft"]
 [ext_resource type="Texture2D" uid="uid://ce41fxtl3ceeg" path="res://recursos/sprites_y_tiles/objetos/Tinte.png" id="10_2bno4"]
 [ext_resource type="Texture2D" uid="uid://bx3ib77yb3hah" path="res://recursos/sprites_y_tiles/objetos/Payaso.png" id="11_qmnew"]
+[ext_resource type="AudioStream" uid="uid://beyqthndq784v" path="res://recursos/1 coger objeto.mp3" id="13_vwfob"]
+[ext_resource type="AudioStream" uid="uid://dcaa71gu8bvd8" path="res://recursos/2 caminar.mp3" id="14_lshv4"]
+[ext_resource type="PackedScene" uid="uid://ct641t26jw7w7" path="res://escenas/interact_area_grande.tscn" id="14_shoa5"]
+[ext_resource type="AudioStream" uid="uid://d3ngmjoxaug5e" path="res://recursos/3 ratadona.mp3" id="15_mtuns"]
+[ext_resource type="AudioStream" uid="uid://blba4fr20kvd8" path="res://recursos/4 ratitas.mp3" id="16_r5are"]
+[ext_resource type="AudioStream" uid="uid://bciaojalrxgmj" path="res://recursos/5 ratadona_fondo.mp3" id="17_rirua"]
+[ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="18_sip2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owhp3"]
 size = Vector2(50, 14)
@@ -60,6 +67,14 @@ size = Vector2(286, 10)
 [node name="Supermercado" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("1_bn1sm")
+
+[node name="Label" type="Label" parent="Supermercado"]
+offset_left = -128.0
+offset_top = -24.0
+offset_right = -72.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("18_sip2j")
+text = "SALIDA"
 
 [node name="Oveja" parent="." instance=ExtResource("2_qfg6h")]
 position = Vector2(15, 67)
@@ -201,6 +216,22 @@ position = Vector2(143, 78)
 texture = ExtResource("2_jmvxi")
 
 [node name="Salida" type="Sprite2D" parent="."]
-position = Vector2(41, 65)
+position = Vector2(25, 78)
 
-[node name="InteractArea" parent="Salida" instance=ExtResource("4_ylrrm")]
+[node name="InteractArea2" parent="Salida" instance=ExtResource("14_shoa5")]
+
+[node name="cogeObjeto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_vwfob")
+
+[node name="caminar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_lshv4")
+
+[node name="ratadona" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_mtuns")
+
+[node name="ratitas" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_r5are")
+
+[node name="ratadonafondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_rirua")
+volume_db = -15.0

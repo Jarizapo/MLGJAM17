@@ -66,6 +66,7 @@ theme_override_fonts/font = ExtResource("1_enuv3")
 text = "Hazla reír o date por ovejimuerto."
 
 [node name="Label14" type="Label" parent="Label9"]
+layout_mode = 0
 offset_top = 9.0
 offset_right = 275.0
 offset_bottom = 58.0
@@ -93,6 +94,7 @@ theme_override_fonts/font = ExtResource("1_enuv3")
 text = "Donde has comprado tus sabanas, son"
 
 [node name="Label14" type="Label" parent="Label11"]
+layout_mode = 0
 offset_top = -7.0
 offset_right = 298.0
 offset_bottom = 42.0
@@ -120,6 +122,7 @@ theme_override_fonts/font = ExtResource("1_enuv3")
 text = "Te vendo el kilo a cinco ratieuros, ya"
 
 [node name="Label14" type="Label" parent="Label13"]
+layout_mode = 0
 offset_top = 9.0
 offset_right = 38.0
 offset_bottom = 22.0

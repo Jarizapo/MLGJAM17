@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcaa71gu8bvd8"
+path="res://.godot/imported/2 caminar.mp3-5a452258f037bcfa73252602163578f3.mp3str"
+
+[deps]
+
+source_file="res://recursos/2 caminar.mp3"
+dest_files=["res://.godot/imported/2 caminar.mp3-5a452258f037bcfa73252602163578f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

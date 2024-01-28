@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="MLGJAM17"
+config/name="Cada oveja con su pareja"
 run/main_scene="res://escenas/principal.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://recursos/OvejaProta.svg"
 
 [display]
 

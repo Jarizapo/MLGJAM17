@@ -1,6 +1,6 @@
 extends Label
 
-@onready var escena = "res://escenas/historia/ratadona_cartel.tscn"
+@onready var escena = "res://escenas/historia/rosaleda_2.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

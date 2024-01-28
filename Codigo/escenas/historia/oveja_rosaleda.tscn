@@ -7,6 +7,7 @@
 [node name="BaseParaNarrativa" type="Node2D"]
 
 [node name="Fondo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.313726)
 position = Vector2(143, 78)
 texture = ExtResource("2_ytsu1")
 
@@ -15,18 +16,25 @@ offset_left = 6.0
 offset_top = 138.0
 offset_right = 240.0
 offset_bottom = 161.0
-theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_color = Color(0.964706, 0.960784, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_tgto0")
 text = "Pulsa [Espacio] para continuar"
 script = ExtResource("2_xm1m4")
 
 [node name="Narrativa" type="Label" parent="."]
-offset_left = 18.0
-offset_top = 24.0
-offset_right = 120.0
-offset_bottom = 47.0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 161.0
+offset_bottom = 130.0
 theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_tgto0")
-text = "Oveja en la rosaleda"
+text = "Es un domingo de verano por la
+noche, eres feliz a tus ochenta ovejaños.
+
+Acabas de salir de un partido
+de tu equipo favorito,
+el Málaga, cuando de repente te
+empieza a vibrar el teléfono sin
+parar"
