@@ -6,13 +6,6 @@
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
-[node name="Narrativa" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "chipi chipi chapa chapa dubi dubi da
-ba daba magico mi dubi dubi bum
-bum bum bum"
-
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("1_p46om")
@@ -27,3 +20,15 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_lys4t")
 text = "[Espacio] Volver a jugar"
 script = ExtResource("2_fhit1")
+
+[node name="Narrativa" type="Label" parent="."]
+offset_top = -1.0
+offset_right = 1081.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lys4t")
+text = "Has podido ver al Málaga ganar en la Rosaleda y has
+salvado tu relanación. El tinte le ha quitado el enfado y la
+hiciste reír con el maquillaje de payaso. De noche conthareis
+ovejitas juntos, acabando felices y comiendo maíces."

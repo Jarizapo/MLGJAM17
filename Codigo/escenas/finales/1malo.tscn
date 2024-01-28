@@ -6,13 +6,6 @@
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
-[node name="Narrativa" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "chipi chipi chapa chapa dubi dubi da
-ba daba magico mi dubi dubi bum
-bum bum bum"
-
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("1_sewji")
@@ -27,3 +20,41 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_hgbh5")
 text = "[Espacio] Volver a jugar"
 script = ExtResource("2_4br4t")
+
+[node name="Narrativa" type="Label" parent="."]
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 279.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hgbh5")
+text = "Por mucho que te hayas esforzado con los regalos, uno de
+ellos no le ha hecho ninguna gracia.
+ "
+
+[node name="Narrativa2" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 18.0
+offset_right = 279.0
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hgbh5")
+text = "
+Te pide un tiempo y te vas a casa de tus ovepadres.
+Un día decides visitarla para llevarle uno de esos
+pintapezuñas que tanto le gustan, cuando adviertes el
+carruaje de tu vecino Juan aparcado delante de casa."
+
+[node name="Narrativa3" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 84.0
+offset_right = 279.0
+offset_bottom = 209.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hgbh5")
+text = "
+Te planteas que decisiones has tomado que te han llevado
+a esta situación."

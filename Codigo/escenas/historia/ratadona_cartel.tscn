@@ -7,12 +7,6 @@
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
-[node name="Narrativa" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("1_thtpb")
-text = "Ratadona cartel"
-
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("2_7udyl")
@@ -27,3 +21,19 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yy22s")
 text = "Pulsa [Espacio] para continuar"
 script = ExtResource("2_ny0pv")
+
+[node name="Narrativa" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 3.0
+offset_right = 1013.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_thtpb")
+text = "En un intento desesperado
+por salvar su
+relanación, la ovejita 
+coquette acude como 
+último recurso al Ratadona más cercano en
+Ratatown a las tantas de la noche, ya que no 
+queda ninguna otra tienda abierta. "

@@ -6,13 +6,6 @@
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
-[node name="Narrativa" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "chipi chipi chapa chapa dubi dubi da
-ba daba magico mi dubi dubi bum
-bum bum bum"
-
 [node name="Fondo" type="Sprite2D" parent="."]
 position = Vector2(143, 78)
 texture = ExtResource("1_8v2ik")
@@ -27,3 +20,49 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_udti8")
 text = "[Espacio] Volver a jugar"
 script = ExtResource("2_5imn1")
+
+[node name="Narrativa" type="Label" parent="."]
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 1085.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udti8")
+text = "Llegas a casa con los regalos y al ver el desatascador,
+es tal el enfado, que grita un, QUIERO EL OVEDIVORCIO."
+
+[node name="Narrativa2" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 28.0
+offset_right = 1085.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udti8")
+text = "Le pides que abra el otro, solo para ver unas tijeras,
+desmayándose por su Aicmofobia."
+
+[node name="Narrativa3" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 58.0
+offset_right = 1085.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udti8")
+text = "La llevas al hospital, pero al tumbarse te ve la camiseta
+del Málaga que escondías entre tu lana, dándose cuenta de
+que pasaste la tarde viendo un partido."
+
+[node name="Narrativa4" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 104.0
+offset_right = 1085.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.968627, 0.803922, 0.960784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udti8")
+text = "El ovedivorcio está más que asegurado y encima el Málaga 
+ha perdido, te hundes en la miseria ovejil.
+"
