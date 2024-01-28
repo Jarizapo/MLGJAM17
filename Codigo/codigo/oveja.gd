@@ -7,6 +7,7 @@ var speed = 10.0
 var objects = [false, false, false, false, false, false, false, false]
 var objectBeingCatched
 var numberOfObjects = 0
+
 @onready var areas = [
 				$"../Objetos/Tinte/InteractArea",
 				$"../Objetos/Tijeras/InteractArea",
@@ -17,6 +18,8 @@ var numberOfObjects = 0
 				$"../Objetos/Desatascador/InteractArea",
 				$"../Objetos/Bombones/InteractArea"
 			]
+
+@onready var animation = $AnimationPlayer
 
 func _ready():
 	update_interactions()
@@ -32,14 +35,18 @@ func _physics_process(delta):
 	
 	if(Input.is_action_pressed("down")):
 		velocity.y += speed
+		animation.play("moving")
 	if(Input.is_action_pressed("up")):
 		velocity.y -= speed
+		animation.play("moving")
 	if(Input.is_action_pressed("left")):
 		velocity.x -= speed
-		$Sprite2D.flip_h = false
+		animation.play("moving")
+		$Sprite2D.flip_h = true
 	if(Input.is_action_pressed("right")):
 		velocity.x += speed
-		$Sprite2D.flip_h = true
+		animation.play("moving")
+		$Sprite2D.flip_h = false
 	
 	velocity.limit_length(30)
 
@@ -48,34 +55,35 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("interact"):
 		execute_interaction()
 		
+func finish_shoppings():
 	var cadena
 		
-	if Input.is_action_just_pressed("finish_shopping"):
-		print(objects)
-		if((objects[0] || objects[4]) && (objects[3] || objects[5])):
-			# Aquí hay que hacer la diferencia entre si le regala el tinte o pintapezuñas
-			# Y si se disfraza de una cosa u otra (hay que hacer 4 escenas)
-			#if(objects[0] && objects[3]):
-				#se pone la escena de tinte y tanga
-			#elif(objects[0] && objects[5]):
-				#se pone la escena de tinte y payaso
-			#elif(objects[4] && objects[3]):
-				#se pone la escena de pintapezunas y tanga
-			#elif(objects[4] && objects[5]):
-				#se pone la escena de pintapezuñas y payaso
-			cadena = "res://escenas/finales/antienfado_antitristeza.tscn"
-		elif((objects[0] && objects[4]) || ((objects[0] || objects[4]) && (objects[2] || objects[7]))):
-			cadena = "res://escenas/finales/antienfado.tscn"
-		elif((objects[3] && objects[5]) || ((objects[3] || objects[5]) && (objects[2] || objects[7]))):
-			cadena = "res://escenas/finales/antitristeza.tscn"
-		elif(objects[2] && objects[7]):
-			cadena = "res://escenas/finales/nada.tscn"
-		elif(objects[1] && objects[6]):
-			cadena = "res://escenas/finales/2malo.tscn"
-		elif(objects[1] || objects[6]):
-			cadena = "res://escenas/finales/1malo.tscn"
-		
-		get_tree().change_scene_to_file(cadena)
+	print(objects)
+	if((objects[0] || objects[4]) && (objects[3] || objects[5])):
+		# Aquí hay que hacer la diferencia entre si le regala el tinte o pintapezuñas
+		# Y si se disfraza de una cosa u otra (hay que hacer 4 escenas)
+		#if(objects[0] && objects[3]):
+			#se pone la escena de tinte y tanga
+		#elif(objects[0] && objects[5]):
+			#se pone la escena de tinte y payaso
+		#elif(objects[4] && objects[3]):
+			#se pone la escena de pintapezunas y tanga
+		#elif(objects[4] && objects[5]):
+			#se pone la escena de pintapezuñas y payaso
+		cadena = "res://escenas/finales/antienfado_antitristeza.tscn"
+	
+	elif((objects[0] && objects[4]) || ((objects[0] || objects[4]) && (objects[2] || objects[7]))):
+		cadena = "res://escenas/finales/antienfado.tscn"
+	elif((objects[3] && objects[5]) || ((objects[3] || objects[5]) && (objects[2] || objects[7]))):
+		cadena = "res://escenas/finales/antitristeza.tscn"
+	elif(objects[2] && objects[7]):
+		cadena = "res://escenas/finales/nada.tscn"
+	elif(objects[1] && objects[6]):
+		cadena = "res://escenas/finales/2malo.tscn"
+	elif(objects[1] || objects[6]):
+		cadena = "res://escenas/finales/1malo.tscn"
+	
+	get_tree().change_scene_to_file(cadena)
 
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
@@ -99,8 +107,12 @@ func execute_interaction():
 				add_object(cur_interaction.interact_value)
 				print(cur_interaction.interact_value)
 			"exit" :
-				print(1)
-				#get_tree().change_scene_to_file("res://escenas/historia/oveja_rosaleda.tscn")
+				if(numberOfObjects == 2):
+					finish_shoppings()
+				elif(numberOfObjects < 2):
+					$"Interaction Components/InteractLabel".set("text", "Coge dos objetos")
+					await get_tree().create_timer(1.5).timeout
+					$"Interaction Components/InteractLabel".set("text", "[E] Terminar la compra")
 
 func add_object(object):
 	if(numberOfObjects < 2):

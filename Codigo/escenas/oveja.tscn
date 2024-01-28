@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://jbwkm8u1u0il"]
+[gd_scene load_steps=10 format=3 uid="uid://jbwkm8u1u0il"]
 
-[ext_resource type="Texture2D" uid="uid://b4vf3rh4a5s7i" path="res://recursos/Oveja.png" id="1_h2klv"]
 [ext_resource type="Script" path="res://codigo/oveja.gd" id="1_inyc6"]
+[ext_resource type="Texture2D" uid="uid://m17cjbxswecw" path="res://recursos/sprites_y_tiles/Oveja.png" id="2_fe3us"]
 [ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="3_mkmqh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5k8v"]
@@ -9,12 +9,66 @@ size = Vector2(12, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8u5bi"]
 
+[sub_resource type="Animation" id="Animation_pdmus"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jgbes"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_vl4cn"]
+resource_name = "moving"
+length = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6bnor"]
+_data = {
+"RESET": SubResource("Animation_jgbes"),
+"idle": SubResource("Animation_pdmus"),
+"moving": SubResource("Animation_vl4cn")
+}
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_inyc6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_h2klv")
+texture = ExtResource("2_fe3us")
 flip_h = true
+hframes = 2
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n5k8v")
@@ -35,10 +89,16 @@ offset_left = -27.0
 offset_top = -25.0
 offset_right = 29.0
 offset_bottom = -2.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_mkmqh")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6bnor")
+}
 
 [connection signal="area_entered" from="Interaction Components/InteractionArea" to="." method="_on_interaction_area_area_entered"]
 [connection signal="area_exited" from="Interaction Components/InteractionArea" to="." method="_on_interaction_area_area_exited"]
