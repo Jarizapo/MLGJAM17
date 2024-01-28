@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfdkb52j5lht3"]
+[gd_scene load_steps=4 format=3 uid="uid://bfdkb52j5lht3"]
 
 [ext_resource type="Texture2D" uid="uid://cw7r72ju3plxb" path="res://recursos/fondos_narrativa/estiercol.png" id="1_qoek8"]
+[ext_resource type="Script" path="res://codigo/finales.gd" id="2_7i5gm"]
+[ext_resource type="FontVariation" uid="uid://cdeg8lcup3cvq" path="res://FuenteMLGJAM17.tres" id="2_o5sgl"]
 
 [node name="BaseParaNarrativa" type="Node2D"]
 
@@ -16,8 +18,12 @@ position = Vector2(143, 78)
 texture = ExtResource("1_qoek8")
 
 [node name="PulsaContinuar" type="Label" parent="."]
-offset_left = 24.0
-offset_top = 127.0
-offset_right = 258.0
-offset_bottom = 150.0
-text = "Pulsa [Espacio] para continuar"
+offset_left = 6.0
+offset_top = 140.0
+offset_right = 240.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0.964706, 0.960784, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o5sgl")
+text = "[Espacio] Volver a jugar"
+script = ExtResource("2_7i5gm")
